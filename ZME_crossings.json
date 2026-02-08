@@ -1,0 +1,562 @@
+[
+    {
+        "fields": "CVG",
+        "fix": "",
+        "restriction": "FL310- (TERGE.SARGO# / TERGE HEREE SARGO)",
+        "notes": "West of FAPER",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZID"
+    },
+    {
+        "fields": "CVG",
+        "fix": "",
+        "restriction": "FL230- (JRICO.SARGO#)",
+        "notes": "East of FAPER",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZID"
+    },
+    {
+        "fields": "LUK,HAO,I69,K62",
+        "fix": "",
+        "restriction": "FL330- (JRICO HEREE SARGO JIMUR)",
+        "notes": "PXV/IMP sectors",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZID"
+    },
+    {
+        "fields": "LUK,HAO,I69,K62",
+        "fix": "",
+        "restriction": "FL270- (MYS SARGO JIMUR)",
+        "notes": "LOU/MYS sectors",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZID"
+    },
+    {
+        "fields": "EVV",
+        "fix": "",
+        "restriction": "FL230 descending 14000'",
+        "notes": "ZID 17/19",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZID"
+    },
+    {
+        "fields": "IND,EYE,MQJ,TYQ",
+        "fix": "",
+        "restriction": "FL330- (TERGE.SMUKE#)",
+        "notes": "ZME 05/25/33, RNAV",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZID"
+    },
+    {
+        "fields": "IND,EYE,MQJ,TYQ",
+        "fix": "",
+        "restriction": "FL330- (PXV.RACYR#)",
+        "notes": "ZME 05/25/33, non-RNAV",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZID"
+    },
+    {
+        "fields": "IND,EYE,MQJ,TYQ",
+        "fix": "",
+        "restriction": "FL330- (HAGAL.GIBBS#)",
+        "notes": "ZME 40/41/63/61, RNAV",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZID"
+    },
+    {
+        "fields": "LEX",
+        "fix": "",
+        "restriction": "FL270 descending FL240 (IIU FEDRA / UNCKL) ",
+        "notes": "East of GUMMA",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZID"
+    },
+    {
+        "fields": "SDF,LOU,JVY",
+        "fix": "",
+        "restriction": "FL290- (MOOCH.BUMPY.MBELL#)",
+        "notes": "Jets, able direct PENBE",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZID"
+    },
+    {
+        "fields": "SDF,LOU,JVY",
+        "fix": "",
+        "restriction": "13000-",
+        "notes": "Props, east of GUMMA",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZID"
+    },
+    {
+        "fields": "SDF,LOU,JVY",
+        "fix": "",
+        "restriction": "FL230-",
+        "notes": "Props, west of GUMMA",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZID"
+    },
+    {
+        "fields": "SDF,LOU,JVY",
+        "fix": "",
+        "restriction": "FL230- (SWAPP DNUTS ARUSH COBBZ.LEDDL#)",
+        "notes": "Jets from BNA terminal",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZID"
+    },
+    {
+        "fields": "STL",
+        "fix": "",
+        "restriction": "FL280- (BOOSH#)",
+        "notes": "RNAV, east of J180",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZKC"
+    },
+    {
+        "fields": "STL",
+        "fix": "",
+        "restriction": "FL240- (FAM DCT) ",
+        "notes": "Non-RNAV, east of J180",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZKC"
+    },
+    {
+        "fields": "STL",
+        "fix": "",
+        "restriction": "Route only (SGF.KAYLA#)",
+        "notes": "RNAV, west of J180",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZKC"
+    },
+    {
+        "fields": "STL",
+        "fix": "",
+        "restriction": "Route only (SGF.KOOOP#)",
+        "notes": "Non-RNAV, west of J180",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZKC"
+    },
+    {
+        "fields": "STL",
+        "fix": "",
+        "restriction": "FL230- (MWA DCT / over BOOSH track)",
+        "notes": "Turboprop, east of J180",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZKC"
+    },
+    {
+        "fields": "ALN,BLV,CPS,SUS",
+        "fix": "",
+        "restriction": "FL350- (DELMA# / DELMA DCT)",
+        "notes": "West of J180",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZKC"
+    },
+    {
+        "fields": "ALN,BLV,CPS",
+        "fix": "",
+        "restriction": "FL270- ",
+        "notes": "East of J180",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZKC"
+    },
+    {
+        "fields": "SUS",
+        "fix": "",
+        "restriction": "FL270- (SLVER DCT) ",
+        "notes": "East of CGI",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZKC"
+    },
+    {
+        "fields": "SUS",
+        "fix": "",
+        "restriction": "FL270- (FAM.SLVER#) ",
+        "notes": "East of J180",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZKC"
+    },
+    {
+        "fields": "MCI",
+        "fix": "",
+        "restriction": "Route only (KRTNY/NELVY.MHOMS#)",
+        "notes": "RNAV",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZKC"
+    },
+    {
+        "fields": "MCI",
+        "fix": "",
+        "restriction": "Route only (SGF/KRAZO.TYGER#)",
+        "notes": "Non-RNAV",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZKC"
+    },
+    {
+        "fields": "MKC",
+        "fix": "",
+        "restriction": "Route only (SGF/KRAZO.TYGER#)",
+        "notes": "",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZKC"
+    },
+    {
+        "fields": "TUL",
+        "fix": "30 NM from TUL",
+        "restriction": "At 10000'",
+        "notes": "Aircraft cruising 10000+",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZKC"
+    },
+    {
+        "fields": "TUL",
+        "fix": "",
+        "restriction": "At 6000'",
+        "notes": "Aircraft cruising 6000-9000' ",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZKC"
+    },
+    {
+        "fields": "TUL",
+        "fix": "",
+        "restriction": "DCT KTUL / TUL VORTAC",
+        "notes": "Aircraft at 4000' or 6000' ",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZKC"
+    },
+    {
+        "fields": "TUL",
+        "fix": "",
+        "restriction": "DCT IAF at 15000'",
+        "notes": "Aircraft requesting HI approach",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZKC"
+    },
+    {
+        "fields": "PLK",
+        "fix": "",
+        "restriction": "At or descending to 6000' (dct PLK)",
+        "notes": "",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZKC"
+    },
+    {
+        "fields": "BBG",
+        "fix": "",
+        "restriction": "6000' (CADAN BBG when instrument, DCT BBG when vis)",
+        "notes": "",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZKC"
+    },
+    {
+        "fields": "MSY,NEW",
+        "fix": "",
+        "restriction": "FL290- (TRSSH#)",
+        "notes": "",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZHU"
+    },
+    {
+        "fields": "ASD,HDC,HUM,NBG",
+        "fix": "",
+        "restriction": "FL290-",
+        "notes": "",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZHU"
+    },
+    {
+        "fields": "PNS,NPA",
+        "fix": "",
+        "restriction": "Routes only (LOXLY PENSI or routes overlying)",
+        "notes": "",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZHU"
+    },
+    {
+        "fields": "DTS,HRT,VPS",
+        "fix": "",
+        "restriction": "Routes only (MURRY/LOXLY CEW or routes overlying)",
+        "notes": "",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZHU"
+    },
+    {
+        "fields": "BFM,CQF,JKA,MOB,PQL,1R8",
+        "fix": "",
+        "restriction": "FL280, descending 10000'",
+        "notes": "East of J31",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZHU"
+    },
+    {
+        "fields": "BTR,HZR,REG,BIX,GPT,HSA,MJD",
+        "fix": "",
+        "restriction": "FL290-",
+        "notes": "East of J35",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZHU"
+    },
+    {
+        "fields": "BTR,HZR,REG",
+        "fix": "",
+        "restriction": "FL280, descending FL240",
+        "notes": "West of J35 ",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZHU"
+    },
+    {
+        "fields": "ARA,IYA,LFT,OPL,3R2,4R7",
+        "fix": "",
+        "restriction": "FL340-",
+        "notes": "West of J35 ",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZHU"
+    },
+    {
+        "fields": "PIB,HBG,LUL",
+        "fix": "",
+        "restriction": "Descending 5000'",
+        "notes": "ZHU CTL on contact",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZHU"
+    },
+    {
+        "fields": "AEX,ESF",
+        "fix": "",
+        "restriction": "FL230 descending 13000'",
+        "notes": "West of J35 ",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZHU"
+    },
+    {
+        "fields": "DFW",
+        "fix": "",
+        "restriction": "Route only (N BRDJE#, S SEEVR#)",
+        "notes": "RNAV, Jet, N of J52",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZFW"
+    },
+    {
+        "fields": "DFW",
+        "fix": "",
+        "restriction": "Route only (WILBR#)",
+        "notes": "Non-RNAV, Prop, N of J52",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZFW"
+    },
+    {
+        "fields": "DFW",
+        "fix": "",
+        "restriction": "Route only (N WHINY#, S BEREE#)",
+        "notes": "RNAV, Jet, S of J52",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZFW"
+    },
+    {
+        "fields": "DFW",
+        "fix": "",
+        "restriction": "Route only (CQY#)",
+        "notes": "Non-RNAV, Prop, S of J52",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZFW"
+    },
+    {
+        "fields": "DAL",
+        "fix": "",
+        "restriction": "Route only (N CRIKT#, S HIBIL#)",
+        "notes": "RNAV, Jet, N of J52",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZFW"
+    },
+    {
+        "fields": "DAL",
+        "fix": "",
+        "restriction": "Route only (FINGR#)",
+        "notes": "Non-RNAV, Prop, N of J52",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZFW"
+    },
+    {
+        "fields": "DAL",
+        "fix": "",
+        "restriction": "Route only (N MNNDO#, S REDDN#)",
+        "notes": "RNAV, Jet, S of J52",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZFW"
+    },
+    {
+        "fields": "DAL",
+        "fix": "",
+        "restriction": "Route only (YEAGR#)",
+        "notes": "Non-RNAV, Prop, S of J52",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZFW"
+    },
+    {
+        "fields": "ADS,TKI,RBD,HQZ",
+        "fix": "",
+        "restriction": "Route only (SLANT#)",
+        "notes": "RNAV, Jet, N of J52",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZFW"
+    },
+    {
+        "fields": "ADS,TKI,RBD,HQZ",
+        "fix": "",
+        "restriction": "Route only (FINGR#)",
+        "notes": "Non-RNAV, Prop, N of J52",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZFW"
+    },
+    {
+        "fields": "ADS,TKI,RBD,HQZ",
+        "fix": "",
+        "restriction": "Route only (N EESAT#, S LOADS#)",
+        "notes": "RNAV, Jet, S of J52",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZFW"
+    },
+    {
+        "fields": "ADS,TKI,RBD,HQZ",
+        "fix": "",
+        "restriction": "Route only (YEAGR#)",
+        "notes": "Non-RNAV, Prop, S of J52",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZFW"
+    },
+    {
+        "fields": "DTO,AFW,FTW,NFW,GPM,GKY,FWS",
+        "fix": "",
+        "restriction": "Route only (TRUUK#)",
+        "notes": "RNAV, Jet, N of J52",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZFW"
+    },
+    {
+        "fields": "DTO,AFW,FTW,NFW,GPM,GKY,FWS",
+        "fix": "",
+        "restriction": "Route only (SASIE)",
+        "notes": "Non-RNAV, Prop, N of J52",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZFW"
+    },
+    {
+        "fields": "DTO,AFW,FTW,NFW,GPM,GKY,FWS",
+        "fix": "",
+        "restriction": "Route only (REEKO#)",
+        "notes": "RNAV, Jet, S of J52",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZFW"
+    },
+    {
+        "fields": "DTO,AFW,FTW,NFW,GPM,GKY,FWS",
+        "fix": "",
+        "restriction": "Route only (DODJE#)",
+        "notes": "Non-RNAV, Prop, S of J52",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZFW"
+    },
+    {
+        "fields": "ELD,CDH",
+        "fix": "",
+        "restriction": "Descending to 4000'",
+        "notes": "",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZFW"
+    },
+    {
+        "fields": "TXK",
+        "fix": "",
+        "restriction": "FL230-",
+        "notes": "",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZFW"
+    },
+    {
+        "fields": "ATL",
+        "fix": "",
+        "restriction": "Route only (LGC#)",
+        "notes": "Non-RNAV, Prop, from ZME46/43",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZTL"
+    },
+    {
+        "fields": "ATL",
+        "fix": "",
+        "restriction": "Route only (E GNDLF#, W HOBTT#)",
+        "notes": "RNAV, Jet, from ZME46/43",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZTL"
+    },
+    {
+        "fields": "ATL",
+        "fix": "",
+        "restriction": "FL330- (GLAVN#) ",
+        "notes": "RNAV, Jet, from ZME31",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZTL"
+    },
+    {
+        "fields": "ATL",
+        "fix": "",
+        "restriction": "FL330- (RMG#)",
+        "notes": "Non-RNAV, Prop, from ZME31/ZME62",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZTL"
+    },
+    {
+        "fields": "ATL",
+        "fix": "",
+        "restriction": "FL330- (CHPPR#)",
+        "notes": "RNAV, Jet, from ZME62",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZTL"
+    },
+    {
+        "fields": "RYY,PDK,PUJ,FTY,FFC,VPC,LZU,6A2,CVC,MGE,HMP,CCO,D73",
+        "fix": "",
+        "restriction": "FL350- (BUKHD# / SWTEE#) ",
+        "notes": "ZME",
+        "artcc_giving": "ZTL",
+        "artcc_receiving": "ZTL"
+    },
+    {
+        "fields": "BHM",
+        "fix": "",
+        "restriction": "FL230 descending 13000' (LYMPH DCT) ",
+        "notes": "South of CBM RAPCON",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZTL"
+    },
+    {
+        "fields": "BHM",
+        "fix": "NULLS / arrival fix",
+        "restriction": "11000' (250kts from the west RWY6, from the north RWY24)",
+        "notes": "",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZTL"
+    },
+    {
+        "fields": "MGM,MXF,SEM",
+        "fix": "",
+        "restriction": "FL330-",
+        "notes": "South of J66",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZTL"
+    },
+    {
+        "fields": "MGM,MXF,SEM",
+        "fix": "",
+        "restriction": "FL290 descending FL240",
+        "notes": "From ZME46/ZME11",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZTL"
+    },
+    {
+        "fields": "TYS,DKX,MOR,GKT",
+        "fix": "",
+        "restriction": "At FL210",
+        "notes": "North of V16 ",
+        "artcc_giving": "ZME",
+        "artcc_receiving": "ZTL"
+    }
+]
