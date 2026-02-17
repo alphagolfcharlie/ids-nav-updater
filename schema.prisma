@@ -1,0 +1,107 @@
+generator client {
+  provider = "prisma-client-py"
+  enable_experimental_decimal = true
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Airport {
+  code String  @id
+  lat  Decimal
+  lon  Decimal
+}
+
+model Airway {
+  awy_code String   @id
+  fixes    String[]
+}
+
+model Crossing {
+  id              Int           @id @default(autoincrement())
+  fix             String?
+  restriction     String
+  notes           String?
+  artcc_giving    artcc_choices
+  artcc_receiving artcc_choices
+  fields          String[]
+}
+
+model Enroute {
+  id        Int      @id @default(autoincrement())
+  fields    String[]
+  qualifier String?
+  areas     Int[]
+  rule      String
+
+  @@index([fields, areas])
+  @@index([fields])
+}
+
+model Fix {
+  fix_id   String  @id
+  lat      Decimal
+  lon      Decimal
+  nav_name String?
+}
+
+model Route {
+  id       Int                  @id @default(autoincrement())
+  dep      String
+  dest     String
+  route    String
+  altitude String?
+  source   route_source_choices
+  notes    String?
+
+  @@index([dep, dest])
+}
+
+model Sid {
+  sid_code String   @id
+  fixes    String[]
+  apts     String[]
+}
+
+model Star {
+  star_code String   @id
+  fixes     String[]
+  apts      String[]
+}
+
+enum artcc_choices {
+  ZSE
+  ZOA
+  ZLA
+  ZLC
+  ZDV
+  ZAB
+  ZHU
+  ZFW
+  ZKC
+  ZMP
+  ZAU
+  ZOB
+  ZID
+  ZME
+  ZTL
+  ZJX
+  ZMA
+  ZDC
+  ZNY
+  ZBW
+  ZSU
+  ZVR
+  ZEG
+  ZWG
+  ZYZ
+  ZQM
+}
+
+enum route_source_choices {
+  custom
+  faa
+}

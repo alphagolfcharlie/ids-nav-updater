@@ -74,14 +74,12 @@ def parse_star(basefile, routefile, outfile):
         route_string = f"{star_name}:{' '.join(fixes)}"
         final_routes.append(route_string)
 
-    print(final_routes)
 
     # Transitions
     for transition_name, fixes in transition_routes.items():
         fixes.sort(key=lambda x: x[1], reverse=True)
         transition_fixes = [f[0] for f in fixes]
 
-        print(transition_fixes)
 
         # Derive STAR name from transition (e.g. BOBTA.TPGUN2 => TPGUN.TPGUN2)
         parts = transition_name.split(".")
@@ -98,7 +96,6 @@ def parse_star(basefile, routefile, outfile):
         route_string = f"{transition_name}:{' '.join(transition_fixes)}"
         final_routes.append(route_string)
 
-        #print(final_routes)
 
     # --- STEP 5: Write to CSV with served airport ---
 
