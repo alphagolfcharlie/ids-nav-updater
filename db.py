@@ -1,11 +1,9 @@
 import json, asyncio
 from prisma import Prisma
 
-async def load_entity(airac: str, json_file: str, model_name: str, mapping: dict):
-    db = Prisma()
-    await db.connect()
-
+async def load_entity(db, airac: str, json_file: str, model_name: str, mapping: dict):
     file_path = f"data/{airac}/json/{json_file}"
+
     with open(file_path, "r", encoding="utf-8-sig") as f:
         data = json.load(f)
 
@@ -14,21 +12,14 @@ async def load_entity(airac: str, json_file: str, model_name: str, mapping: dict
         row = {db_field: item[csv_field] for csv_field, db_field in mapping.items() if csv_field in item}
         sanitized.append(row)
 
-    # Delete all existing
     model = getattr(db, model_name)
-    await model.delete_many()
 
-    # Insert
     result = await model.create_many(data=sanitized, skip_duplicates=True)
     print(f"{model_name}: inserted {result} records")
 
-    await db.disconnect()
-
-async def load_faa_routes(airac: str):
-    db = Prisma()
-    await db.connect()
-
+async def load_faa_routes(db, airac: str):
     file_path = f"data/{airac}/json/faa.json"
+
     with open(file_path, "r", encoding="utf-8-sig") as f:
         data = json.load(f)
 
@@ -43,17 +34,12 @@ async def load_faa_routes(airac: str):
             "source": "faa",
         })
 
-    await db.route.delete_many()
     result = await db.route.create_many(data=sanitized, skip_duplicates=True)
-    print(f"FAA routes:  inserted {result} records")
+    print(f"FAA routes: inserted {result} records")
 
-    await db.disconnect()
-
-async def load_airways(airac: str):
-    db = Prisma()
-    await db.connect()
-
+async def load_airways(db, airac: str):
     file_path = f"data/{airac}/json/awy.json"
+
     with open(file_path, "r", encoding="utf-8-sig") as f:
         data = json.load(f)
 
@@ -64,17 +50,12 @@ async def load_airways(airac: str):
             "fixes": item.get("AIRWAY_STRING", "").split(),
         })
 
-    await db.airway.delete_many()
     result = await db.airway.create_many(data=sanitized, skip_duplicates=True)
     print(f"Airways: inserted {result} records")
 
-    await db.disconnect()
-
-async def load_sids(airac: str):
-    db = Prisma()
-    await db.connect()
-
+async def load_sids(db, airac: str):
     file_path = f"data/{airac}/json/sid.json"
+
     with open(file_path, "r", encoding="utf-8-sig") as f:
         data = json.load(f)
 
@@ -86,17 +67,12 @@ async def load_sids(airac: str):
             "fixes": item.get("fixes", "").split(),
         })
 
-    await db.sid.delete_many()
     result = await db.sid.create_many(data=sanitized, skip_duplicates=True)
     print(f"SIDs: inserted {result} records")
 
-    await db.disconnect()
-
-async def load_stars(airac: str):
-    db = Prisma()
-    await db.connect()
-
+async def load_stars(db, airac: str):
     file_path = f"data/{airac}/json/star.json"
+
     with open(file_path, "r", encoding="utf-8-sig") as f:
         data = json.load(f)
 
@@ -108,33 +84,51 @@ async def load_stars(airac: str):
             "fixes": item.get("fixes", "").split(),
         })
 
-    await db.star.delete_many()
     result = await db.star.create_many(data=sanitized, skip_duplicates=True)
     print(f"STARs: inserted {result} records")
 
-    await db.disconnect()
-
 async def update(airac: str):
-    await load_entity(airac, "apt.json", "airport", {
+    db = Prisma()
+    await db.connect()
+
+    print("Clearing existing nav data...")
+
+    await db.fix.delete_many()
+    await db.airway.delete_many()
+    await db.route.delete_many()
+    await db.sid.delete_many()
+    await db.star.delete_many()
+    await db.airport.delete_many()
+
+    print("Loading new AIRAC data...")
+
+    await load_entity(db, airac, "apt.json", "airport", {
         "ARPT_ID": "code",
         "LAT_DECIMAL": "lat",
         "LONG_DECIMAL": "lon"
     })
-    await load_airways(airac)
-    await load_faa_routes(airac)
-    await load_entity(airac, "fixes.json", "fix", {
+
+    await load_airways(db, airac)
+
+    await load_faa_routes(db, airac)
+
+    await load_entity(db, airac, "fixes.json", "fix", {
         "FIX_ID": "fix_id",
         "LAT_DECIMAL": "lat",
         "LONG_DECIMAL": "lon"
     })
-    await load_entity(airac, "nav.json", "fix", {
+
+    await load_entity(db, airac, "nav.json", "fix", {
         "NAV_ID": "fix_id",
         "LAT_DECIMAL": "lat",
         "LONG_DECIMAL": "lon",
         "NAME": "nav_name"
     })
 
-    await load_sids(airac)
-    await load_stars(airac)
+    await load_sids(db, airac)
+    await load_stars(db, airac)
 
+    await db.disconnect()
+
+    print("AIRAC update complete.")
 
